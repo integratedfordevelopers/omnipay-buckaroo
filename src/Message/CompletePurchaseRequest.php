@@ -13,7 +13,11 @@ class CompletePurchaseRequest extends AbstractRequest
     {
         $this->validate('websiteKey', 'secretKey', 'amount');
 
-        $originalData = $this->httpRequest->request->all();
+        if (count($this->httpRequest->request->all())) {
+            $originalData = $this->httpRequest->request->all();
+        } else {
+            $originalData = $this->httpRequest->query->all();
+        }
         $data = array_change_key_case($originalData, CASE_UPPER);
 
         $signature = isset($data['BRQ_SIGNATURE']) ? strtolower($data['BRQ_SIGNATURE']) : null;
