@@ -1,7 +1,7 @@
 {
-    "name": "omnipay/buckaroo",
+    "name": "integrated/omnipay-buckaroo",
     "type": "library",
-    "description": "Buckaroo driver for the Omnipay payment processing library",
+    "description": "Buckaroo driver for the Omnipay payment processing library, fork from kochen/omnipay-buckaroo",
     "keywords": [
         "buckaroo",
         "gateway",
@@ -10,7 +10,7 @@
         "pay",
         "payment"
     ],
-    "homepage": "https://github.com/thephpleague/omnipay-buckaroo",
+    "homepage": "https://github.com/integratedfordevelopers/omnipay-buckaroo",
     "license": "MIT",
     "authors": [
         {
@@ -30,10 +30,5 @@
     },
     "require-dev": {
         "omnipay/tests": "~2.0"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.x-dev"
-        }
     }
 }
